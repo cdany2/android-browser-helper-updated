@@ -17,11 +17,11 @@ package com.google.androidbrowserhelper.trusted.testcomponents;
 import android.os.Bundle;
 import android.os.Looper;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A fake Browser that accepts browsable Intents.

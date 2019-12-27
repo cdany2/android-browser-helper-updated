@@ -15,11 +15,11 @@ package com.google.androidbrowserhelper.trusted;
 
 import android.content.pm.PackageManager;
 
-import java.util.Arrays;
-import java.util.List;
-
 import androidx.browser.customtabs.CustomTabsClient;
 import androidx.browser.customtabs.CustomTabsService;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * The behaviour of the Trusted Web Activity Launcher changes based on what features are supported

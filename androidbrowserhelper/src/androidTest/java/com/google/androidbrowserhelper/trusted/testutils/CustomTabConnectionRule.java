@@ -14,10 +14,12 @@
 
 package com.google.androidbrowserhelper.trusted.testutils;
 
-import static org.junit.Assert.fail;
-
 import android.content.ComponentName;
 import android.content.Context;
+
+import androidx.browser.customtabs.CustomTabsClient;
+import androidx.browser.customtabs.CustomTabsServiceConnection;
+import androidx.browser.customtabs.CustomTabsSession;
 
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -25,9 +27,7 @@ import org.junit.runner.Description;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import androidx.browser.customtabs.CustomTabsClient;
-import androidx.browser.customtabs.CustomTabsServiceConnection;
-import androidx.browser.customtabs.CustomTabsSession;
+import static org.junit.Assert.fail;
 
 /**
  * TestRule that helps establishing a connection to CustomTabsService.

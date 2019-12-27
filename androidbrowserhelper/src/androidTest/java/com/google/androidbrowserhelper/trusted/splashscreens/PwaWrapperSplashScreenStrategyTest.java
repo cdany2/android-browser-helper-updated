@@ -14,18 +14,6 @@
 
 package com.google.androidbrowserhelper.trusted.splashscreens;
 
-import static com.google.androidbrowserhelper.trusted.testutils.TestUtil.runOnUiThreadBlocking;
-
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
-
-import static androidx.browser.trusted.TrustedWebActivityIntentBuilder.EXTRA_SPLASH_SCREEN_PARAMS;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -36,6 +24,14 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.browser.customtabs.CustomTabsSession;
+import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
+import androidx.browser.trusted.splashscreens.SplashScreenParamKey;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.MediumTest;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.rule.ActivityTestRule;
 
 import com.google.androidbrowserhelper.test.R;
 import com.google.androidbrowserhelper.trusted.testcomponents.TestActivity;
@@ -56,13 +52,15 @@ import java.io.File;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import androidx.browser.customtabs.CustomTabsSession;
-import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
-import androidx.browser.trusted.splashscreens.SplashScreenParamKey;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.filters.MediumTest;
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.rule.ActivityTestRule;
+import static androidx.browser.trusted.TrustedWebActivityIntentBuilder.EXTRA_SPLASH_SCREEN_PARAMS;
+import static com.google.androidbrowserhelper.trusted.testutils.TestUtil.runOnUiThreadBlocking;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 
 /**
  * Tests for {@link PwaWrapperSplashScreenStrategy}.

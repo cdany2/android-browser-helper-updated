@@ -18,14 +18,14 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
+import androidx.test.InstrumentationRegistry;
+
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import androidx.test.InstrumentationRegistry;
 
 /**
  * The Custom Tabs and Trusted Web Activity functionality require Activities and Services to be

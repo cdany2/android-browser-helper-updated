@@ -14,8 +14,9 @@
 
 package com.google.androidbrowserhelper.trusted;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import androidx.browser.trusted.sharing.ShareTarget;
+import androidx.browser.trusted.sharing.ShareTarget.FileFormField;
+import androidx.browser.trusted.sharing.ShareTarget.Params;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,9 +29,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import androidx.browser.trusted.sharing.ShareTarget;
-import androidx.browser.trusted.sharing.ShareTarget.FileFormField;
-import androidx.browser.trusted.sharing.ShareTarget.Params;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 /**
  * Tests for {@link SharingUtils#parseShareTargetJson}.

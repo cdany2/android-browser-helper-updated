@@ -14,8 +14,33 @@
 
 package com.google.androidbrowserhelper.trusted;
 
-import static com.google.androidbrowserhelper.trusted.testutils.TestUtil.getBrowserActivityWhenLaunched;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 
+import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.browser.customtabs.CustomTabsSessionToken;
+import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.MediumTest;
+import androidx.test.rule.ActivityTestRule;
+
+import com.google.androidbrowserhelper.trusted.splashscreens.SplashScreenStrategy;
+import com.google.androidbrowserhelper.trusted.testcomponents.TestActivity;
+import com.google.androidbrowserhelper.trusted.testcomponents.TestBrowser;
+import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsService;
+import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsServiceSupportsTwas;
+import com.google.androidbrowserhelper.trusted.testutils.EnableComponentsTestRule;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static androidx.browser.customtabs.TrustedWebUtils.EXTRA_LAUNCH_AS_TRUSTED_WEB_ACTIVITY;
+import static com.google.androidbrowserhelper.trusted.testutils.TestUtil.getBrowserActivityWhenLaunched;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -28,33 +53,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
-
-import static androidx.browser.customtabs.TrustedWebUtils.EXTRA_LAUNCH_AS_TRUSTED_WEB_ACTIVITY;
-
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-
-import com.google.androidbrowserhelper.trusted.splashscreens.SplashScreenStrategy;
-import com.google.androidbrowserhelper.trusted.testutils.EnableComponentsTestRule;
-import com.google.androidbrowserhelper.trusted.testcomponents.TestActivity;
-import com.google.androidbrowserhelper.trusted.testcomponents.TestBrowser;
-import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsService;
-import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsServiceSupportsTwas;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import androidx.browser.customtabs.CustomTabsIntent;
-import androidx.browser.customtabs.CustomTabsSessionToken;
-import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
-import androidx.test.InstrumentationRegistry;
-import androidx.test.filters.MediumTest;
-import androidx.test.rule.ActivityTestRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 /**
  * Instrumentation tests for {@link TwaLauncher}

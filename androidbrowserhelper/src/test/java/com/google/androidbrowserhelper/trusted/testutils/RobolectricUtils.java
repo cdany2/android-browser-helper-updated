@@ -18,13 +18,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ResolveInfo;
 
+import androidx.browser.customtabs.CustomTabsService;
+
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowPackageManager;
 
 import java.util.List;
-
-import androidx.browser.customtabs.CustomTabsService;
 
 /**
  * Utils for testing with Robolectric.

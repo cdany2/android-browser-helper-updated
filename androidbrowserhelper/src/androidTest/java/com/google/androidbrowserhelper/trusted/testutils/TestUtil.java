@@ -14,12 +14,11 @@
 
 package com.google.androidbrowserhelper.trusted.testutils;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
 import android.app.Instrumentation;
 import android.os.Handler;
 import android.os.Looper;
+
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.google.androidbrowserhelper.trusted.testcomponents.TestBrowser;
 
@@ -27,7 +26,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-import androidx.test.platform.app.InstrumentationRegistry;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 
 /**

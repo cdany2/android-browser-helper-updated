@@ -14,20 +14,24 @@
 
 package com.google.androidbrowserhelper.trusted;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-
-import static androidx.browser.customtabs.TrustedWebUtils.EXTRA_LAUNCH_AS_TRUSTED_WEB_ACTIVITY;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
+import androidx.browser.trusted.sharing.ShareData;
+import androidx.browser.trusted.sharing.ShareTarget;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.MediumTest;
+import androidx.test.rule.ActivityTestRule;
+
 import com.google.androidbrowserhelper.test.R;
-import com.google.androidbrowserhelper.trusted.testutils.EnableComponentsTestRule;
 import com.google.androidbrowserhelper.trusted.testcomponents.TestBrowser;
 import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsService;
 import com.google.androidbrowserhelper.trusted.testcomponents.TestCustomTabsServiceSupportsTwas;
+import com.google.androidbrowserhelper.trusted.testutils.EnableComponentsTestRule;
 import com.google.androidbrowserhelper.trusted.testutils.TestUtil;
 
 import org.junit.After;
@@ -41,14 +45,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import androidx.browser.customtabs.CustomTabsIntent;
-import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
-import androidx.browser.trusted.sharing.ShareData;
-import androidx.browser.trusted.sharing.ShareTarget;
-import androidx.test.InstrumentationRegistry;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.filters.MediumTest;
-import androidx.test.rule.ActivityTestRule;
+import static androidx.browser.customtabs.TrustedWebUtils.EXTRA_LAUNCH_AS_TRUSTED_WEB_ACTIVITY;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Tests for {@link LauncherActivity}.

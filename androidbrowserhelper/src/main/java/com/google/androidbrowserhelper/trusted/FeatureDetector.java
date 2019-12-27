@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
+import androidx.browser.customtabs.CustomTabsService;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.browser.customtabs.CustomTabsService;
 
 /**
  * Finds which features the given provider supports by querying PackageManager.

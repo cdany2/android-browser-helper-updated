@@ -20,13 +20,13 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import com.google.androidbrowserhelper.trusted.ChromeLegacyUtils;
-import com.google.androidbrowserhelper.trusted.FeatureDetector;
-
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabColorSchemeParams;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
+
+import com.google.androidbrowserhelper.trusted.ChromeLegacyUtils;
+import com.google.androidbrowserhelper.trusted.FeatureDetector;
 
 /**
  * Predicts system status bar and navigation bar colors that are about to be shown in a Trusted Web

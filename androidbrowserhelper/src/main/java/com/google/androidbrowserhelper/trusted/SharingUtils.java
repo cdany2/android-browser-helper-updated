@@ -17,6 +17,11 @@ package com.google.androidbrowserhelper.trusted;
 import android.content.Intent;
 import android.net.Uri;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.browser.trusted.sharing.ShareData;
+import androidx.browser.trusted.sharing.ShareTarget;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,11 +29,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.browser.trusted.sharing.ShareData;
-import androidx.browser.trusted.sharing.ShareTarget;
 
 /**
  * Utils for preparing the share data to be sent into a Trusted Web Activity.

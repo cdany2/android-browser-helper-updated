@@ -14,19 +14,11 @@
 
 package com.google.androidbrowserhelper.trusted;
 
-import static android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT;
-import static android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER;
-import static android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
-
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
-
-import com.google.androidbrowserhelper.trusted.splashscreens.PwaWrapperSplashScreenStrategy;
-
-import org.json.JSONException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +29,12 @@ import androidx.browser.trusted.TrustedWebActivityService;
 import androidx.browser.trusted.sharing.ShareData;
 import androidx.browser.trusted.sharing.ShareTarget;
 import androidx.core.content.ContextCompat;
+
+import com.google.androidbrowserhelper.trusted.splashscreens.PwaWrapperSplashScreenStrategy;
+
+import org.json.JSONException;
+
+import static android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER;
 
 /**
  * A convenience class to make using Trusted Web Activities easier. You can extend this class for

@@ -14,10 +14,7 @@
 
 package com.google.androidbrowserhelper.trusted.splashscreens;
 
-import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.os.Build;
@@ -27,9 +24,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import com.google.androidbrowserhelper.trusted.FeatureDetector;
-import com.google.androidbrowserhelper.trusted.Utils;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
@@ -42,6 +36,11 @@ import androidx.browser.trusted.TrustedWebActivityDisplayMode.ImmersiveMode;
 import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
 import androidx.browser.trusted.splashscreens.SplashScreenParamKey;
 import androidx.browser.trusted.splashscreens.SplashScreenVersion;
+
+import com.google.androidbrowserhelper.trusted.FeatureDetector;
+import com.google.androidbrowserhelper.trusted.Utils;
+
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
 /**
  * Implementation of {@link SplashScreenStrategy} suitable for apps that are PWA wrappers (i.e.

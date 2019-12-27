@@ -14,8 +14,6 @@
 
 package com.google.androidbrowserhelper.trusted;
 
-import static androidx.browser.customtabs.CustomTabsService.TRUSTED_WEB_ACTIVITY_CATEGORY;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -23,16 +21,17 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.IntDef;
+import androidx.annotation.Nullable;
+import androidx.browser.customtabs.CustomTabsService;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.IntDef;
-import androidx.annotation.Nullable;
-import androidx.browser.customtabs.CustomTabsService;
-import androidx.browser.customtabs.TrustedWebUtils;
+import static androidx.browser.customtabs.CustomTabsService.TRUSTED_WEB_ACTIVITY_CATEGORY;
 
 /**
  * Chooses a Browser/Custom Tabs/Trusted Web Activity provider and appropriate launch mode.

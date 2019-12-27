@@ -14,15 +14,12 @@
 
 package com.google.androidbrowserhelper.trusted.splashscreens;
 
-import static org.junit.Assert.assertEquals;
-
-import static androidx.browser.customtabs.CustomTabsIntent.COLOR_SCHEME_LIGHT;
-import static androidx.browser.customtabs.CustomTabsService.CATEGORY_COLOR_SCHEME_CUSTOMIZATION;
-import static androidx.browser.customtabs.CustomTabsService.CATEGORY_NAVBAR_COLOR_CUSTOMIZATION;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
+
+import androidx.browser.customtabs.CustomTabColorSchemeParams;
+import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
 
 import com.google.androidbrowserhelper.trusted.FeatureDetector;
 import com.google.androidbrowserhelper.trusted.testutils.RobolectricUtils;
@@ -36,8 +33,10 @@ import org.robolectric.annotation.internal.DoNotInstrument;
 
 import java.util.Arrays;
 
-import androidx.browser.customtabs.CustomTabColorSchemeParams;
-import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
+import static androidx.browser.customtabs.CustomTabsIntent.COLOR_SCHEME_LIGHT;
+import static androidx.browser.customtabs.CustomTabsService.CATEGORY_COLOR_SCHEME_CUSTOMIZATION;
+import static androidx.browser.customtabs.CustomTabsService.CATEGORY_NAVBAR_COLOR_CUSTOMIZATION;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for {@link SystemBarColorPredictor}.

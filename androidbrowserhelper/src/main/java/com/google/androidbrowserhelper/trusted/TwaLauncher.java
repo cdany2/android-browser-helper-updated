@@ -16,11 +16,8 @@ package com.google.androidbrowserhelper.trusted;
 
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
-
-import com.google.androidbrowserhelper.trusted.splashscreens.SplashScreenStrategy;
 
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsClient;
@@ -30,7 +27,8 @@ import androidx.browser.customtabs.CustomTabsServiceConnection;
 import androidx.browser.customtabs.CustomTabsSession;
 import androidx.browser.trusted.TrustedWebActivityIntentBuilder;
 import androidx.browser.trusted.TrustedWebActivityService;
-import androidx.core.content.ContextCompat;
+
+import com.google.androidbrowserhelper.trusted.splashscreens.SplashScreenStrategy;
 
 /**
  * Encapsulates the steps necessary to launch a Trusted Web Activity, such as establishing a
